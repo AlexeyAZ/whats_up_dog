@@ -1,0 +1,43 @@
+- var sec2SnacksList = [["1", "Картошка Free", "Все любят золотистый, тающий во рту картофель фри, но не каждый знает, как приготовить его правильно. Специальная технология обжарки картофеля и настоящий начо сыр делают наш продукт аутентичным и по-настоящему вкусным."], ["2", "Чипсы Начос", "Начос - это кукурузные чипсы, приготовленные из кукурузной муки по традиионной технологи. Наши начос подаются с настоящим начо сыром."]];
+
+- var sec2FillersList = [["Чили Кон карне", "Настоящий мясной рагу с фасолью родом из Техаса. Название взято из испанского языка и означает буквально “чили с мясом”. Основными компонентами являются острый перец и измельчённое мясо"], ["Халапеньо резаные", "Мексиканский измельчённый перец чили"], ["Горячий начо сыр", "Проект стартовал в Штатах в марте 2003 года, у нас — пару лет назад. "]];
+
+div.snacks
+	div.container
+		div.note.snacks__note
+			div.note__title.snacks__note-title.
+				наши
+			div.note__heading.
+				Закуски
+			svg(class="icon-decor-border-big").note__border.snacks__note-border
+				use(xlink:href="#decor-border-big")
+		div.menu-list.snacks__menu-list
+			each item in sec2SnacksList
+				div.menu-list__item.menu-list__item_reorder
+					div.menu-list__row.snacks__menu-list-row
+						div.menu-list__col.menu-list__col_img
+							img(src="img/snacks-item" + item[0] + ".png", alt="").menu-list__img
+						div.menu-list__col.menu-list__col_description.snacks__menu-list-col.snacks__menu-list-col_description
+							p.fs-xl.menu-list__title.
+								#{item[1]}
+							p.
+								#{item[2]}
+					img(src="img/decor-border-free.png", alt="").menu-list__decor-border
+	div.fillers
+		div.container
+			div.ta-center.fillers__note-wrap
+				div.note.fillers__note
+					div.note__heading.
+						Наполнители
+					svg(class="icon-decor-border").note__border
+						use(xlink:href="#decor-border-bigger")
+			div.fillers__list
+				each item, index in sec2FillersList
+					div.fillers__list-item
+						div.fillers__list-img-wrap
+							img(src="img/fillers-item" + (index + 1) + ".png", alt="").fillers__list-img
+						div.fillers__list-descr
+							div.fillers__list-title.
+								#{item[0]}
+							div.fillers__list-subtitle.
+								#{item[1]}

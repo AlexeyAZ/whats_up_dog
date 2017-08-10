@@ -1,0 +1,25 @@
+- var navList = [["#menu", "меню"], ["#about", "о нас"], ["#reviews","отзывы"], ["#franchise", "франшиза"], ["#contacts", "контакты"]];
+
+header.header
+	div.container.header__container
+		div.header__item.header__item_logo
+			a(href="").header__logo
+				img(src="img/header-logo.png", alt="").header__logo-img
+		div.header__item.header__item_nav
+			div.header__social
+				ul.social-list.header__social-list
+					each item in socialList
+						li.social-list__item.header__social-item
+							a(href="").social-list__link.header__social-link
+								svg(class="icon-icon-" + item).social-list__icon
+									use(xlink:href="#icon-" + item)
+			nav.header__nav
+				div.header__nav-menu
+					div.header__nav-menu-icon
+				ul.header__nav-list
+					li.header__nav-item.header__nav-item_close
+						div.header__nav-close
+					each item in navList
+						li.header__nav-item
+							a(href=item[0]).header__nav-link.
+								#{item[1]}

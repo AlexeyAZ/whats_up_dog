@@ -1,0 +1,31 @@
+- var triggersList = [["hotdog", "Легендарные<br> хот-доги"], ["vegetables", "Только свежие<br> продукты"], ["caravan", "Неизменные традиции<br> и качество"], ["world", "Известный<br> мировой бренд"], ["recommended", "Оригинальный рецепт"], ["forward", "Сверхзувковая<br> скорость обслуживания"]];
+
+section.sec.sec1
+	include header
+	div.container.sec1__container
+		div.sec1__content
+			div.sec1__border
+				div.sec1__border-inner
+					div.sec1__border-title.sec1__border-title_lines.
+						попробуй
+					div.sec1__border-title.
+						настоящие хот-доги
+					div.sec1__border-subtitle.
+						родом из сан-франциско
+			p.fs-l.sec1__main-text.
+				Наш основной ингредиент, это легендарная сосиска франкфуртер в стиле Сан-Франциско, а так же другие гурмэ сосиски от лучших производителей США. Мы всегда движимы желанием общаться с новыми людьми, находить и делиться чем-то прекрасным. What’s Up Dog - это ритм улиц, ритм современного мегаполиса.
+		div.sec1__triggers
+			div.sec1__triggers-list
+				each item in triggersList
+					div.sec1__triggers-item
+						svg(class="icon-icon-" + item[0]).sec1__triggers-icon
+							use(xlink:href="#icon-" + item[0])
+						div.
+							!{item[1]}
+			div.sec1__triggers-note.note
+				div.note__title.sec1__note-title.
+					наши
+				div.note__heading.
+					Акции
+				svg(class="icon-decor-border").note__border
+					use(xlink:href="#decor-border")

@@ -1,0 +1,38 @@
+.snacks {
+	background-color: $brown-main-darken;
+	background-image: url("../img/snacks-table.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+
+	&__note {
+		transform: translateY(-50%);
+		//padding: 40px 54px 50px;
+	}
+
+	&__note-title {
+		@include hor-lines($width: 55px, $side-padding: 10px);
+	}
+
+	&__note-border {
+		fill: $brown-main-darken;
+	}
+
+	&__menu-list {
+		margin-top: -30px;
+	}
+
+	&__menu-list-row {
+		align-items: flex-start;
+		margin-bottom: 10px;
+	}
+
+	&__menu-list-col {
+		
+		&_description {
+			padding-top: 20px;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 0.5em;
+}
+
+h3 {
+	font-size: 36px;
+
+	@include media(w768) {
+		font-size: 28px;
+	}
+}
+
+.fs-xl {
+	font-size: 24px;
+
+	@include media(w768) {
+		
+	}
+}
+
+.fs-l {
+	font-size: 22px;
+
+	@include media(w768) {
+		font-size: 18px;
+	}
+}
+
+.fs-m {
+	font-size: 18px;
+
+	@include media(w768) {
+		font-size: 16px;
+	}
+}
+
+.fs-s {
+	font-size: 16px;
+}

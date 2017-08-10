@@ -1,0 +1,35 @@
+section#reviews.sec.sec4
+	div.container
+		div.ta-center.sec4__note-wrap
+			div.note
+				div.note__title.sec4__note-title.
+					отзывы
+				div.note__heading.
+					О нас
+				svg(class="icon-decor-border").note__border.sec4__note-border
+					use(xlink:href="#decor-border")
+		div.sec4__gallery-wrap
+			div.sec4__gallery-container
+				div.sec4__gallery-arrow.sec4__gallery-arrow_left.js-sec4-gallery-arrow-left
+					svg.icon-gallery-arrow.sec4__gallery-arrow-img
+						use(xlink:href="#gallery-arrow")
+				div.sec4__gallery.js-sec4-gallery
+					- for (var i = 0; i < 4; i++) {
+						div.sec4__gallery-item
+							div.sec4__gallery-comment
+								div.sec4__gallery-comment-inner
+									div.sec4__gallery-comment-name.
+										Иван Иванов
+									div.sec4__gallery-comment-order
+										|Заказ:
+										div.
+											Чикагский хот-дог, картошка Фри с сырным соусом.
+									div.sec4__gallery-comment-text.
+										Креативный подход, качественная работа. Всё сделано на высшем уровне! Прекрасная работа, быстро и качественно. Лучшие сосиски в городе, еще и время приготовления моментальное. Не заставляют себя ждать!
+									div.sec4__gallery-comment-date.
+										15.05.2017
+					- }
+				div.sec4__gallery-arrow.sec4__gallery-arrow_right.js-sec4-gallery-arrow-right
+					svg.icon-gallery-arrow.sec4__gallery-arrow-img
+						use(xlink:href="#gallery-arrow")
+			div.sec4__gallery-dots

@@ -1,0 +1,14 @@
+footer.footer
+	div.container.footer__container
+		div.footer__copy.
+			Glowslubs <?=date('Y')?> © Все права защищены
+		div.footer__info
+			ul.social-list.footer__social-list
+				each item in socialList
+					li.social-list__item.header__social-item
+						a(href="").social-list__link.header__social-link
+							svg(class="icon-icon-" + item).social-list__icon
+								use(xlink:href="#icon-" + item)
+			a(href="").footer__logo
+				svg.icon-footer-logo.footer__logo-icon
+					use(xlink:href="#footer-logo")

@@ -1,0 +1,24 @@
+- var sec2MenuList = [["1", "What’s up, Dog!", "Вотс ап дог - это фирменный хот-дог с сосиской фракнкфуртер, луком-фри, свит релиш и дополнительным соусом на ваш выбор. Вотс ап дог - это классический рецепт и верность традиции. Всё гениальное просто. Отличный выбор для ценителей настоящих хот-догов."], ["2", "Чил-Чиз Дог", "Чили-чиз дог - это легендарный франкфуртер с мясным мексиканским рагу с фасолью чили кон карне, топленым чеддером и соусом на ваш выбор."], ["3", "Чикагский", "Чикагский хот-дог это невероятное сочетание разных продуктов на одной булочке. Нежный франкфуртер, свежие овощи и приправы! Когда смотришь на него, кажется, что булочка сейчас не выдержит и он развалится на кусочки, однако не надо переживать - этого не произойдет) Жители Чикаго с снисхождением смотрят на другие хот-доги. Для них “Чикагский” хот-дог - самый настоящий хот-дог. Порадуйти себя отменным хот-догом родом из Чикаго"]];
+
+div#menu.menu
+	div.container
+		div.ta-center.menu__note-wrap
+			div.note.menu__note
+				div.note__title.menu__note-title.
+					наше
+				div.note__heading.
+					Меню
+				svg(class="icon-decor-border").note__border
+					use(xlink:href="#decor-border")
+		div.menu-list.menu__list
+			each item in sec2MenuList
+				div.menu-list__item.menu__list-item
+					div.menu-list__row
+						div.menu-list__col.menu-list__col_img
+							img(src="img/menu-item" + item[0] + ".png", alt="").menu-list__img
+						div.menu-list__col.menu-list__col_description
+							p.fs-xl.menu-list__title.
+								#{item[1]}
+							p.
+								#{item[2]}
+					img(src="img/decor-border-hotdog.png", alt="").menu-list__decor-border.menu__list-decor-border

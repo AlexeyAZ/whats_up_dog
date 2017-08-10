@@ -1,0 +1,24 @@
+.social-list {
+
+	&__item {
+		display: inline-block;
+		margin-left: 34px;
+
+		@include media(w768) {
+			margin-left: 20px;
+		}
+	}
+
+	&__icon {
+		transition: $trans;
+		fill: rgba(255,255,255,0.5);
+		font-size: 1.9rem;
+		height: 1em;
+
+		@include media(w768) {
+			font-size: 1.4rem;
+		}
+	}
+}
+
+	

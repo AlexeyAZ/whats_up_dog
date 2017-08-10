@@ -1,0 +1,71 @@
+@mixin media($media) {
+
+    @if $media == w1500 {
+        @media only screen and (max-width: 1500px) { @content; }
+    }
+
+    @else if $media == w1366 {
+        @media only screen and (max-width: 1366px) { @content; }
+    }
+
+    @else if $media == w1280 {
+        @media only screen and (max-width: 1280px) { @content; }
+    }
+
+    @else if $media == w1024 {
+        @media only screen and (max-width: 1024px) { @content; }
+    }
+
+    @else if $media == w768 {
+        @media only screen and (max-width: 768px) { @content; }
+    }
+
+    @else if $media == w500 {
+        @media only screen and (max-width: 500px) { @content; }
+    }
+
+    @else if $media == w400 {
+        @media only screen and (max-width: 400px) { @content; }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin hor-lines($bg-color: currentColor, $height: 1px, $width: 100px, $side-padding: 10px) {
+    display: inline-block;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        background-color: $bg-color;
+        position: absolute;
+        top: calc(50% - #{$height / 2});
+        height: $height;
+        width: $width;
+    }
+
+    &:before {
+        right: calc(100% + #{$side-padding});
+    }
+
+    &:after {
+        left: calc(100% + #{$side-padding});
+    }
+}

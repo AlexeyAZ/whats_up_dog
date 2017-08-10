@@ -1,0 +1,30 @@
+- var sec2HitIngredients = ["Булочка с кунжутом", "Булочка с кунжутом", "Булочка с кунжутом", "Булочка с кунжутом", "Булочка с кунжутом", "Булочка с кунжутом"];
+
+div.hit
+	img(src="img/hit-table.jpg", alt="").hit__table
+	div.container
+		div.ta-center.hit__note-wrap
+			div.note.hit__note
+				div.note__heading.hit__note-heading.
+					Хит
+				div.note__title.hit__note-title.
+					сезона
+				svg(class="icon-decor-border").note__border.hit__note-border
+					use(xlink:href="#decor-border")
+		div.menu-list.hit__menu-list
+			div.menu-list__item
+				div.menu-list__row.hit__menu-list-row
+					div.menu-list__col.menu-list__col_description.hit__menu-list-description
+						p.fs-xl.menu-list__title.
+							Криспи Чикен
+						p.
+							Куриные кусочки в хрустящей панировке, овощи и лёгкий слой сливочного майонеза. Свежеприготовленный хот-дог подаётся на идеально подрумяненной булочке с кунжутной посыпкой.
+					div.menu-list__col.menu-list__col_img.hit__menu-list-img
+						div.hit__img-container
+							each item, index in sec2HitIngredients
+								div(class="hit__ingredient-wrap_" + (index + 1)).hit__ingredient-wrap
+									div.hit__ingredient
+									div.hit__ingredient-descr
+										p.mb0.
+											#{item}
+							img(src="img/hit-img.png", alt="").menu-list__img

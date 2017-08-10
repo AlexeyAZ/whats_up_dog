@@ -1,0 +1,56 @@
+.menu {
+	margin-bottom: 30px;
+
+	&__note-wrap {
+		margin-left: -60px;
+		margin-right: -60px;
+		overflow: hidden;
+
+		@include media(w1366) {
+			margin-left: -30px;
+			margin-right: -30px;
+		}
+
+		@include media(w1280) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@include media(w768) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__note {
+
+		@include hor-lines($width: 100vw, $side-padding: -1px, $height: 2px);
+	}
+
+	&__note-title {
+
+		@include hor-lines($width: 30px, $side-padding: 5px);
+	}
+
+	&__list {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__list-item {
+		margin-top: -96px;
+		margin-bottom: 60px;
+
+		@include media(w1280) {
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__list-decor-border {
+		margin-top: -36px;
+
+		@include media(w1280) {
+			margin-top: 0;
+		}
+	}
+}

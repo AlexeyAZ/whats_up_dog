@@ -1,0 +1,194 @@
+.header {
+	margin-bottom: 90px;
+	padding-top: 40px;
+
+	@include media(w1024) {
+		margin-bottom: 60px;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		position: relative;
+
+		&_logo {
+			flex-shrink: 0;
+		}
+
+		&_nav {
+			flex-shrink: 1;
+			flex-grow: 10;
+		}
+	}
+
+	&__logo {
+		display: block;
+	}
+
+	&__logo-img {
+		display: block;
+
+		@include media(w768) {
+			max-width: 100px;
+		}
+	}
+
+	&__social {
+		position: absolute;
+		bottom: calc(100% + 24px);
+		right: 0;
+
+		@include media(w768) {
+			bottom: calc(100% + 10px);
+		}
+	}
+
+	&__social-list {
+		text-align: right;
+		white-space: nowrap;
+	}
+
+	&__social-link {
+
+		&:hover {
+
+			.social-list__icon {
+				fill: white;
+			}
+		}
+	}
+
+	&__nav {
+		padding-right: 12.6%;
+
+		@include media(w768) {
+			text-align: right;
+			padding-right: 0;
+		}
+	}
+
+	&__nav-menu {
+		//border: 2px solid white;
+		cursor: pointer;
+		display: none;
+		position: relative;
+		height: 30px;
+		width: 30px;
+
+		@include media(w768) {
+			display: inline-block;
+		}
+	}
+
+	&__nav-menu-icon {
+		transform: translate(-50%, -50%);
+		background-color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 2px;
+		width: 28px;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: white;
+			position: absolute;
+			left: 0;
+			height: 2px;
+			width: 100%;
+		}
+
+		&:before {
+			top: -10px;
+		}
+
+		&:after {
+			bottom: -10px;
+		}
+	}
+
+	&__nav-list {
+		transition: $trans;
+		text-align: right;
+		white-space: nowrap;
+
+		@include media(w768) {
+			transform: translateX(100%);
+			background-color: rgba(0,0,0,0.8);
+			display: block;
+			font-size: 20px;
+			padding: 55px 15px 15px;
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 10;
+		}
+
+		&_show {
+			transform: translateX(0);
+		}
+	}
+
+	&__nav-close {
+		transition: 0.2s;
+		cursor: pointer;
+		display: inline-block;
+		position: relative;
+		height: 30px;
+		width: 30px;
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: white;
+			border-radius: 1px;
+			margin-left: -1px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			height: 100%;
+			width: 2px;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__nav-item {
+		display: inline-block;
+		margin-left: 4.1%;
+
+		&_close {
+			display: none;
+
+			@include media(w768) {
+				display: block;
+			}
+		}
+
+		@include media(w768) {
+			display: block;
+			margin-bottom: 0.5em;
+		}
+	}
+	
+	&__nav-link {
+		text-transform: uppercase;
+
+		&:hover {
+			color: $red-main;
+		}
+	}
+}

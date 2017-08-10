@@ -1,0 +1,44 @@
+.sec6 {
+	background-color: $gray-main-darken;
+
+	&__note {
+		transform: translateY(-50%);
+	}
+
+	&__note-title {
+		@include hor-lines($width: 85px, $side-padding: 10px);
+	}
+
+	&__note-border {
+		fill: $gray-main-darken;
+	}
+
+	&__map {
+		height: 740px;
+	}
+
+	&__map-popup {
+		color: white;
+		text-align: center;
+		font-size: 16px;
+		height: 60px;
+		width: 200px;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			height: 100%;
+			width: 0;
+		}
+
+		div {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+.sec5 {
+	background-image: url("../img/sec5-bg.jpg");
+	border-bottom: 3px solid white;
+	padding: 180px 0 80px;
+
+	@include media(w1024) {
+		padding: 60px 0 0;
+	}
+
+	@include media(w768) {
+		padding-top: 30px;
+	}
+
+	&__form-wrap {
+		background-color: white;
+		margin-left: auto;
+		padding: 44px 60px 65px 216px;
+		width: 696px;
+
+		@include media(w1024) {
+			padding: 40px;
+			margin: 0 auto 30px;
+			width: auto;
+			max-width: 600px;
+		}
+
+		@include media(w768) {
+			padding: 20px;
+		}
+	}
+
+	&__form-title {
+		color: $red-main;
+		font-family: "Lobster", Arial, Helvetica, sans-serif;
+		font-size: 50px;
+		margin-bottom: 0.4em;
+
+		@include media(w768) {
+			font-size: 30px;
+		}
+	}
+
+	&__form-subtitle {
+		margin-bottom: 1.4em;
+
+		@include media(w768) {
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__form-fields {
+		display: flex;
+		margin-bottom: 10px;
+
+		@include media(w768) {
+			flex-flow: column;
+		}
+	}
+
+	&__form-label {
+		display: block;
+		width: 50%;
+
+		&:first-child {
+			padding-right: 12px;
+
+			@include media(w768) {
+				padding-right: 0;
+			}
+		}
+
+		&:last-child {
+			padding-left: 12px;
+
+			@include media(w768) {
+				padding-left: 0;
+			}
+		}
+
+		@include media(w768) {
+			margin-bottom: 10px;
+			width: auto;
+		}
+	}
+
+	&__form-field {
+		height: 100%;
+		width: 100%;
+	}
+
+	&__women {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: 45vw;
+		max-height: 80%;
+
+		@include media(w1280) {
+			right: 48vw;
+		}
+
+		@include media(w1024) {
+			margin: 0 auto;
+			position: static;
+			max-height: none;
+			max-width: 500px;
+			width: 80%;
+		}
+	}
+}

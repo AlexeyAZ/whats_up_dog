@@ -1,0 +1,20 @@
+.btn-rect {
+	transition: $trans;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-family: "RobotoCondensed", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 10px 20px;
+
+	&_main {
+		background-color: $red-main;
+		color: white;
+
+		&:hover {
+			background-color: lighten($red-main, 5%);
+		}
+	}
+}

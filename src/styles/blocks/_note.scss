@@ -1,0 +1,35 @@
+.note {
+	color: white;
+	text-align: center;
+	padding: 20px 40px 34px;
+	position: relative;
+	z-index: 1;
+
+	&__title {
+		font-size: 18px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	&__heading {
+		font-family: "Lobster", Arial, Helvetica, sans-serif;
+		font-size: 50px;
+		line-height: 1;
+
+		@include media(w768) {
+			font-size: 30px;
+		}
+	}
+
+	&__border {
+		fill: transparent;
+		stroke-width: 2px;
+		stroke: white;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+	}
+}
