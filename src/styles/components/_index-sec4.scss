@@ -1,6 +1,8 @@
 .sec4 {
 	background-color: $gray-main-darken;
-	background-image: url("../img/sec4-bg.jpg");
+	background-image: url("../img/sec2-bg.png");
+	background-repeat: repeat;
+	background-size: auto;
 	padding-bottom: 110px;
 
 	@include media(w1024) {

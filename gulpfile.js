@@ -10,6 +10,7 @@ const plugins = {
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/slick-carousel/slick/slick.min.js',
         'bower_components/jquery-mask-plugin/dist/jquery.mask.min.js',
+        'bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.min.js'
     ],
     css: [
         'bower_components/reset-css/reset.css',

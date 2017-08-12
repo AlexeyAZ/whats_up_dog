@@ -129,10 +129,6 @@ h3 {
   font-size: 1.8rem;
   width: 1.05556em; }
 
-.icon-header-logo {
-  font-size: 82.87rem;
-  width: 1.51985em; }
-
 .icon-icon-caravan {
   font-size: 43.35rem;
   width: 0.83045em; }
@@ -245,6 +241,9 @@ body {
     font-size: 18px;
     font-weight: 300;
     text-transform: uppercase; }
+    @media only screen and (max-width: 768px) {
+      .note__title {
+        font-size: 14px; } }
   .note__heading {
     font-family: "Lobster", Arial, Helvetica, sans-serif;
     font-size: 50px;
@@ -527,12 +526,10 @@ body {
     white-space: nowrap; }
   .header__social-link:hover .social-list__icon {
     fill: white; }
-  .header__nav {
-    padding-right: 12.6%; }
-    @media only screen and (max-width: 768px) {
-      .header__nav {
-        text-align: right;
-        padding-right: 0; } }
+  @media only screen and (max-width: 768px) {
+    .header__nav {
+      text-align: right;
+      padding-right: 0; } }
   .header__nav-menu {
     cursor: pointer;
     display: none;
@@ -574,7 +571,7 @@ body {
         -webkit-transform: translateX(100%);
             -ms-transform: translateX(100%);
                 transform: translateX(100%);
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.9);
         display: block;
         font-size: 20px;
         padding: 55px 15px 15px;
@@ -853,7 +850,9 @@ body {
 
 .sec2 {
   background-color: #1c1c1c;
-  background-image: url("../img/sec2-bg.jpg");
+  background-image: url("../img/sec2-bg.png");
+  background-repeat: repeat;
+  background-size: auto;
   padding-top: 316px; }
   @media only screen and (max-width: 1280px) {
     .sec2 {
@@ -1190,8 +1189,6 @@ body {
   background-color: #23100b;
   background-image: url("../img/snacks-table.jpg");
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   position: relative;
   z-index: 1; }
   .snacks__note {
@@ -1390,7 +1387,9 @@ body {
 
 .sec4 {
   background-color: #1c1c1c;
-  background-image: url("../img/sec4-bg.jpg");
+  background-image: url("../img/sec2-bg.png");
+  background-repeat: repeat;
+  background-size: auto;
   padding-bottom: 110px; }
   @media only screen and (max-width: 1024px) {
     .sec4 {
@@ -1675,9 +1674,12 @@ body {
 .sec6 {
   background-color: #1c1c1c; }
   .sec6__note {
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+    -webkit-transform: translate(-50%, -70%);
+        -ms-transform: translate(-50%, -70%);
+            transform: translate(-50%, -70%);
+    position: absolute;
+    top: 0;
+    left: 50%; }
   .sec6__note-title {
     display: inline-block;
     position: relative; }
@@ -1692,11 +1694,33 @@ body {
       right: calc(100% + 10px); }
     .sec6__note-title:after {
       left: calc(100% + 10px); }
+    @media only screen and (max-width: 768px) {
+      .sec6__note-title {
+        display: inline-block;
+        position: relative; }
+        .sec6__note-title:before, .sec6__note-title:after {
+          content: "";
+          background-color: currentColor;
+          position: absolute;
+          top: calc(50% - 0.5px);
+          height: 1px;
+          width: 35px; }
+        .sec6__note-title:before {
+          right: calc(100% + 10px); }
+        .sec6__note-title:after {
+          left: calc(100% + 10px); } }
   .sec6__note-border {
     fill: #1c1c1c; }
   .sec6__map {
     height: 740px; }
+    @media only screen and (max-width: 1024px) {
+      .sec6__map {
+        height: 70vw; } }
   .sec6__map-popup {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     color: white;
     text-align: center;
     font-size: 16px;
@@ -1713,6 +1737,8 @@ body {
       vertical-align: middle; }
     .sec6__map-popup p {
       margin-bottom: 0; }
+  .sec6__map-popup-hide {
+    display: none; }
 
 .modal {
   -webkit-transition: all 0.3s ease;

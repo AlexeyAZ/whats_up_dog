@@ -14,13 +14,11 @@ html
         link(rel="icon" type="image/png" href="favicon.png" sizes="16x16")
         link(rel="stylesheet", href="styles/vendor.css")
         link(rel="stylesheet", href="styles/main.css")
-        script(src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js")
-        script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzF9hHdclH4I3VRDc3uYG0iuqZThz2BZQ")
-        script(defer src="https://cdn.sobekrepository.org/includes/gmaps-markerwithlabel/1.9.1/gmaps-markerwithlabel-1.9.1.min.js")
     body
         include ../components/svg
         include ../components/modal
         block content
         include ../components/footer
-        script(src="scripts/vendor.js")
-        script(src="scripts/app.js")
+        script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzF9hHdclH4I3VRDc3uYG0iuqZThz2BZQ")
+        script(defer src="scripts/vendor.js")
+        script(defer src="scripts/app.js")

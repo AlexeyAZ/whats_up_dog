@@ -63,7 +63,7 @@
 	}
 
 	&__nav {
-		padding-right: 12.6%;
+		//padding-right: 12.6%;
 
 		@include media(w768) {
 			text-align: right;
@@ -119,7 +119,7 @@
 
 		@include media(w768) {
 			transform: translateX(100%);
-			background-color: rgba(0,0,0,0.8);
+			background-color: rgba(0,0,0,0.9);
 			display: block;
 			font-size: 20px;
 			padding: 55px 15px 15px;

@@ -2,11 +2,18 @@
 	background-color: $gray-main-darken;
 
 	&__note {
-		transform: translateY(-50%);
+		transform: translate(-50%,-70%);
+		position: absolute;
+		top: 0;
+		left: 50%;
 	}
 
 	&__note-title {
 		@include hor-lines($width: 85px, $side-padding: 10px);
+
+		@include media(w768) {
+			@include hor-lines($width: 35px, $side-padding: 10px);
+		}
 	}
 
 	&__note-border {
@@ -15,9 +22,14 @@
 
 	&__map {
 		height: 740px;
+
+		@include media(w1024) {
+			height: 70vw;
+		}
 	}
 
 	&__map-popup {
+		user-select: none;
 		color: white;
 		text-align: center;
 		font-size: 16px;
@@ -40,5 +52,9 @@
 		p {
 			margin-bottom: 0;
 		}
+	}
+
+	&__map-popup-hide {
+		display: none;
 	}
 }

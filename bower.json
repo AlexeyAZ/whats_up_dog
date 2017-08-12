@@ -16,6 +16,7 @@
     "jquery": "^2.2.2",
     "reset-css": "^2.2.0",
     "slick-carousel": "^1.7.1",
-    "jquery-mask-plugin": "^1.14.11"
+    "jquery-mask-plugin": "^1.14.11",
+    "google-maps-utility-library-v3-markerwithlabel": "^1.1.10"
   }
 }

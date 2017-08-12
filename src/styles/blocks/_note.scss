@@ -9,6 +9,10 @@
 		font-size: 18px;
 		font-weight: 300;
 		text-transform: uppercase;
+
+		@include media(w768) {
+			font-size: 14px;
+		}
 	}
 
 	&__heading {
